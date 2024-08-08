@@ -37,32 +37,4 @@ public class BrowserContextInitializer {
         ActiveContext.setActiveBrowserContext(BrowserContext.getBrowserContextOne());
         ActiveContext.setActivePage(BrowserContext.getContextOneActivePage());
     }
-
-    /**
-     * Initialize browser context number two
-     */
-    public static void initializeBrowserContextTwo() {
-        BrowserContext.setBrowserContextTwo(PlaywrightSourceManager.getLocalBrowser().newContext(BrowserOptions.browserContextOptions()));
-    }
-
-    /**
-     * Initialize browser context number two page
-     */
-    public static void initializeBrowserContextTwoPage() {
-        com.microsoft.playwright.BrowserContext browserContext2 = BrowserContext.getBrowserContextTwo();
-        BrowserContext.getBrowserContextTwo().tracing().start(new Tracing.StartOptions()
-                .setScreenshots(true)
-                .setSnapshots(true)
-                .setSources(false));
-
-        BrowserContext.getBrowserContextTwo().grantPermissions(grantPermissions);
-
-        browserContext2.grantPermissions(grantPermissions);
-        browserContext2.setDefaultNavigationTimeout(GlobalConfig.DEFAULT_NAVIGATION_TIMEOUT);
-        browserContext2.setDefaultTimeout(GlobalConfig.DEFAULT_TIMEOUT);
-
-        BrowserContext.setContextTwoActivePage(BrowserContext.getBrowserContextTwo().newPage());
-        ActiveContext.setActiveBrowserContext(BrowserContext.getBrowserContextTwo());
-        ActiveContext.setActivePage(BrowserContext.getContextTwoActivePage());
-    }
 }

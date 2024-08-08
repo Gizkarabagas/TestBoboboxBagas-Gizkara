@@ -9,7 +9,6 @@ import utilities.PlaywrightHelpers;
 public class LoginPO {
     private Page page;
     PlaywrightHelpers playwright;
-
     Locator userNamePlaceholder;
     Locator passwordPlacehoder;
     Locator loginButton;

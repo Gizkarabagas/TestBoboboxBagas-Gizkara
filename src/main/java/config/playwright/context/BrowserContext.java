@@ -6,7 +6,7 @@ import lombok.Setter;
 
 public class BrowserContext {
     @Setter @Getter
-    private static com.microsoft.playwright.BrowserContext browserContextOne, browserContextTwo;
+    private static com.microsoft.playwright.BrowserContext browserContextOne;
     @Setter @Getter
-    private static Page contextOneActivePage, contextTwoActivePage;
+    private static Page contextOneActivePage;
 }

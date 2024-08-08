@@ -14,7 +14,7 @@ public class BrowserInitialize {
      * @return Browser playwrigh
      */
     public Browser getBrowser(String browserName, BrowserType.LaunchOptions launchOptions) {
-        BrowserType browserType = null;
+        BrowserType browserType;
 
         switch (browserName.toLowerCase()) {
             case "chrome":

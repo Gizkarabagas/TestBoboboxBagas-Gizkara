@@ -10,7 +10,6 @@ public class HomepagePO {
 
     Locator shoppingCart;
     Locator addCart;
-    Locator addItems;
 
     public HomepagePO(Page page) {
         this.page = page;

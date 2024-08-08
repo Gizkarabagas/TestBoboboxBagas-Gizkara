@@ -95,7 +95,7 @@ Feature: flow transaction
     And user click item "Sauce Labs Bike Light"
     Then user successfully verify detail item "Sauce Labs Bike Light"
 
-  Scenario: user in overiview and go to detail item
+  Scenario: user check cart have several item
     Given user visit saucedemo
     When user login with credential
       | username      | password     |

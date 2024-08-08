@@ -7,14 +7,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 import pageobject.transaction.TransactionPO;
-import utilities.PlaywrightHelpers;
 
 import java.util.List;
 
 public class transaction {
     Page page = ActiveContext.getActivePage();
     TransactionPO transaction = new TransactionPO(page);
-    PlaywrightHelpers playwright = new PlaywrightHelpers(page);
 
 
     @When("user fill firstname {string}")

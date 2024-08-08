@@ -7,20 +7,16 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 import pageobject.homepage.HomepagePO;
-import utilities.PlaywrightHelpers;
+
 
 import java.util.List;
 
 public class homepage {
     Page page = ActiveContext.getActivePage();
     HomepagePO hompage = new HomepagePO(page);
-    PlaywrightHelpers playwright = new PlaywrightHelpers(page);
 
     @When("user select items to cart")
     public void user_select_items_to_cart(List<String> items) {
-//        for (String item : items) {
-//            hompage.removeItems(item);
-//        }
         for (String item : items) {
             hompage.addcart(item);
         }

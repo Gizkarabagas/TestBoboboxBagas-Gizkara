@@ -1,4 +1,4 @@
-#@Test1
+@Test1
 Feature: login saucedemo
 
   Scenario: success login saucedemo
@@ -13,7 +13,7 @@ Feature: login saucedemo
       When user login with credential
         |username     | password    |
         |standard_user| salah password|
-      Then user verify "Epic sadface: Username and password do not match any user in this servicesss"
+      Then user verify "Epic sadface: Username and password do not match any user in this service"
 
   Scenario: user login with wrong username
     Given user visit saucedemo
